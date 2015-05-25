@@ -1,0 +1,45 @@
+Example of usage:
+
+./agrisInput.sh /work/agris/input/agrisap/ 2012 DJ 0 true agrisap
+
+So the application needs 6 mandatory parameters:
+1) the path of the directory containing files to convert
+2) the year (used in the ARN generation)
+3) center code (used in the ARN generation)
+4) country code bit (used in the ARN generation)
+5) a boolean: 
+	if false, it does not check for duplicates and does not generate ARNs (which should 
+	be already in tha data).
+	if true, the parser checks for duplicates (based on titles) and generate new ARNs
+6) the dataformat (use: agrisap)
+
+The output goes in the directory OUTPUT, located in the source directory.
+
+Mapped fields:
+dc:title
+dcterms:alternative
+ags:creatorPersonal
+ags:creatorCorporate
+ags:creatorConference
+dcterms:dateIssued
+dc:language
+dc:subject
+ags:subjectClassification
+ags:subjectThesaurus
+ags:citationTitle
+ags:publisherName
+ags:publisherPlace
+ags:citationIdentifier
+dc:identifier
+ags:citationNumber
+ags:citationChronology
+dcterms:extent
+dc:type
+dc:source
+dcterms:abstract
+
+****************************************************************************************************
+*********************************** 	AGRICOLA	************************************************
+****************************************************************************************************
+
+./agrisInput.sh /work/agris/input/AGRICOLA/ 2013 US 0 false agricola

@@ -1,0 +1,18 @@
+Eldis assign Agrovoc keywords and filtering records
+
+OFFLINE: generate mapping URI->agrovoc using AgrovocTagger
+
+MAIN:
+scan ELDIS-DATA x
+	if(getAgrovoc(uri(x))==null)
+		checkInternalEldisKeyword(x);
+	else if (getAgrovoc(uri(x))<3)
+		SKIP_RECORD;
+	else 
+		keywords = getAgrovoc(uri(x))
+		
+checkInternalEldisKeyword()
+	ik(keywords.size>2 && <4)
+		ACCEPT if match 2 keywords with Agrovoc;
+	else
+		ACCEPT if match 3 keywords with Agrovoc;

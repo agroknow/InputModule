@@ -1,0 +1,11 @@
+org.fao.oekc.agris
+org.fao.oekc.agris.inputRecords
+org.fao.oekc.agris.inputRecords.customizations
+org.fao.oekc.agris.inputRecords.dom
+org.fao.oekc.agris.inputRecords.executor
+org.fao.oekc.agris.inputRecords.index
+org.fao.oekc.agris.inputRecords.parser
+org.fao.oekc.agris.inputRecords.test
+org.fao.oekc.agris.inputRecords.util
+org.fao.oekc.agris.inputRecords.writer
+org.fao.oekc.agris.test_applications.eldis

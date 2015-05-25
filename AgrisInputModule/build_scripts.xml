@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="init" name="AGRIS 2 Indexing Console">
+
+	<description>AGRIS 2 Indexing Console Application</description>
+	
+	<!-- directories declaration -->
+	<property name="scriptDir" location="agrisInput" />
+	<property name="classDir" location="agrisInput/applications" />
+	<property name="sourceClass" location="bin" />
+	<property name="libDir" location="agrisInput/lib" />
+	<property name="sourceLib" location="lib" />
+	
+	<target name="init">
+		<tstamp />
+		<!-- build directories structure -->
+		<delete dir="${scriptDir}" />
+		<mkdir dir="${scriptDir}" />
+		<mkdir dir="${classDir}" />
+		<mkdir dir="${libDir}" />
+		
+		<!-- copy all classes files -->
+		<copy todir="${classDir}">
+			<fileset dir="${sourceClass}">
+				<exclude name="default.properties" />
+			</fileset>
+		</copy>
+		
+		<!-- copy libraries -->
+		<copy todir="${libDir}">
+			<fileset dir="${sourceLib}">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		
+		<tstamp />
+	</target>
+</project>
